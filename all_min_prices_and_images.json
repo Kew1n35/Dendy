@@ -1,0 +1,1288 @@
+{
+  "Bunny Muffin": {
+    "Party Time (0.4%)": {
+      "price_rub": 3220.07,
+      "image_url": "https://gifts.coffin.meme/bunny%20muffin/Party%20Time.png"
+    },
+    "Gold (0.3%)": {
+      "price_rub": 9200.2,
+      "image_url": "https://gifts.coffin.meme/bunny%20muffin/Gold.png"
+    },
+    "Diamond (0.3%)": {
+      "price_rub": 9200.2,
+      "image_url": "https://gifts.coffin.meme/bunny%20muffin/Diamond.png"
+    },
+    "Ice Cream (0.5%)": {
+      "price_rub": 2530.06,
+      "image_url": "https://gifts.coffin.meme/bunny%20muffin/Ice%20Cream.png"
+    }
+  },
+  "Jelly Bunny": {
+    "Sticky Red (0.5%)": {
+      "price_rub": 1150.03,
+      "image_url": "https://gifts.coffin.meme/jelly%20bunny/Sticky%20Red.png"
+    },
+    "Noble (0.5%)": {
+      "price_rub": 1380.03,
+      "image_url": "https://gifts.coffin.meme/jelly%20bunny/Noble.png"
+    },
+    "Engineer (1.5%)": {
+      "price_rub": 1147.72,
+      "image_url": "https://gifts.coffin.meme/jelly%20bunny/Engineer.png"
+    }
+  },
+  "Astral Shard": {
+    "Dark Soul (0.8%)": {
+      "price_rub": 76678.8,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Dark%20Soul.png"
+    },
+    "Elven Might (0.8%)": {
+      "price_rub": 99914.8,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Elven%20Might.png"
+    },
+    "Eve's Apple (0.8%)": {
+      "price_rub": 371776.0,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Eve%27s%20Apple.png"
+    },
+    "Excalibrite (1.3%)": {
+      "price_rub": 88296.8,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Excalibrite.png"
+    },
+    "Lovestone (1.3%)": {
+      "price_rub": 69708.0,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Lovestone.png"
+    },
+    "Aquarium (1.3%)": {
+      "price_rub": 51119.2,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Aquarium.png"
+    },
+    "Muffin (1.3%)": {
+      "price_rub": 41824.8,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Muffin.png"
+    },
+    "Nectarite (1.3%)": {
+      "price_rub": 58090.0,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Nectarite.png"
+    },
+    "Crystal Punk (1.3%)": {
+      "price_rub": 54604.6,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Crystal%20Punk.png"
+    },
+    "Fractured (1.7%)": {
+      "price_rub": 76678.8,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Fractured.png"
+    },
+    "Barbed (1.7%)": {
+      "price_rub": 74355.2,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Barbed.png"
+    },
+    "Blender (1.7%)": {
+      "price_rub": 62710.71,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Blender.png"
+    },
+    "Ivy Vine (1.7%)": {
+      "price_rub": 62713.96,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Ivy%20Vine.png"
+    },
+    "Arctite (1.7%)": {
+      "price_rub": 69708.0,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Arctite.png"
+    },
+    "Gold 999 (2%)": {
+      "price_rub": 56928.2,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Gold%20999.png"
+    },
+    "Silver Art (2%)": {
+      "price_rub": 39501.2,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Silver%20Art.png"
+    },
+    "Gramite (2%)": {
+      "price_rub": 32530.4,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Gramite.png"
+    },
+    "Premium (2%)": {
+      "price_rub": 46472.0,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Premium.png"
+    },
+    "Jurassic (2%)": {
+      "price_rub": 41824.8,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Jurassic.png"
+    },
+    "Galactite (2%)": {
+      "price_rub": 58090.0,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Galactite.png"
+    },
+    "Nouveau Gold (2%)": {
+      "price_rub": 72031.6,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Nouveau%20Gold.png"
+    },
+    "Pure Silver (2%)": {
+      "price_rub": 34621.64,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Pure%20Silver.png"
+    },
+    "Bogartite (2%)": {
+      "price_rub": 58090.0,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Bogartite.png"
+    },
+    "Warholite (2%)": {
+      "price_rub": 36015.8,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Warholite.png"
+    },
+    "Uranium (2%)": {
+      "price_rub": 45310.2,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Uranium.png"
+    },
+    "Moonstone (2.3%)": {
+      "price_rub": 30183.56,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Moonstone.png"
+    },
+    "RGB-ite (2.3%)": {
+      "price_rub": 41824.8,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/RGB-ite.png"
+    },
+    "Glowstone (2.3%)": {
+      "price_rub": 46472.0,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Glowstone.png"
+    },
+    "Ruby Fuchsite (2.4%)": {
+      "price_rub": 27650.84,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Ruby%20Fuchsite.png"
+    },
+    "Aquamarine (2.4%)": {
+      "price_rub": 28812.64,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Aquamarine.png"
+    },
+    "Red Ruby (2.4%)": {
+      "price_rub": 56974.67,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Red%20Ruby.png"
+    },
+    "Citrine (2.4%)": {
+      "price_rub": 35249.01,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Citrine.png"
+    },
+    "Moonlit (2.4%)": {
+      "price_rub": 35272.25,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Moonlit.png"
+    },
+    "Sunstone (2.4%)": {
+      "price_rub": 34854.0,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Sunstone.png"
+    },
+    "Spinel (2.4%)": {
+      "price_rub": 29045.0,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Spinel.png"
+    },
+    "Tanzanite (2.4%)": {
+      "price_rub": 40895.36,
+      "image_url": "https://gifts.coffin.meme/astral%20shard/Tanzanite.png"
+    }
+  },
+  "B-Day Candle": {
+    "On Fire (0.2%)": {
+      "price_rub": 2091.24,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/On%20Fire.png"
+    },
+    "Shocker (0.2%)": {
+      "price_rub": 1626.52,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Shocker.png"
+    },
+    "Final Boss (0.2%)": {
+      "price_rub": 1858.88,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Final%20Boss.png"
+    },
+    "Kaboom! (0.2%)": {
+      "price_rub": 1440.63,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Kaboom%21.png"
+    },
+    "Pixel Wish (0.2%)": {
+      "price_rub": 1115.33,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Pixel%20Wish.png"
+    },
+    "Cherrific (0.4%)": {
+      "price_rub": 487.96,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Cherrific.png"
+    },
+    "Small Gifts (0.4%)": {
+      "price_rub": 553.02,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Small%20Gifts.png"
+    },
+    "Payday (0.4%)": {
+      "price_rub": 1593.99,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Payday.png"
+    },
+    "Winter Fun (0.4%)": {
+      "price_rub": 673.84,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Winter%20Fun.png"
+    },
+    "Melted Butter (0.4%)": {
+      "price_rub": 697.08,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Melted%20Butter.png"
+    },
+    "Crunchy (0.4%)": {
+      "price_rub": 580.9,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Crunchy.png"
+    },
+    "Duck Attack (0.4%)": {
+      "price_rub": 697.08,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Duck%20Attack.png"
+    },
+    "Bubbly (0.4%)": {
+      "price_rub": 810.94,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Bubbly.png"
+    },
+    "Eggcellent (0.4%)": {
+      "price_rub": 731.93,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Eggcellent.png"
+    },
+    "Happy Meows (0.5%)": {
+      "price_rub": 1394.16,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Happy%20Meows.png"
+    },
+    "Purr Magic (0.5%)": {
+      "price_rub": 929.44,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Purr%20Magic.png"
+    },
+    "Mouse Brunch (0.5%)": {
+      "price_rub": 641.31,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Mouse%20Brunch.png"
+    },
+    "Valentine (0.6%)": {
+      "price_rub": 720.32,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Valentine.png"
+    },
+    "You Rock! (0.6%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/You%20Rock%21.png"
+    },
+    "Party Hard (0.6%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Party%20Hard.png"
+    },
+    "Stay Cool (0.6%)": {
+      "price_rub": 511.19,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Stay%20Cool.png"
+    },
+    "Neon Lights (0.6%)": {
+      "price_rub": 534.43,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Neon%20Lights.png"
+    },
+    "Neon Sign (0.6%)": {
+      "price_rub": 511.19,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Neon%20Sign.png"
+    },
+    "Crazy Frog (0.6%)": {
+      "price_rub": 1277.98,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Crazy%20Frog.png"
+    },
+    "Backyard (0.6%)": {
+      "price_rub": 506.54,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Backyard.png"
+    },
+    "Broadway (0.6%)": {
+      "price_rub": 508.87,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Broadway.png"
+    },
+    "Glitch (0.6%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Glitch.png"
+    },
+    "Firecracker (0.6%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Firecracker.png"
+    },
+    "Red Ribbon (0.6%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Red%20Ribbon.png"
+    },
+    "Forecast (0.8%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Forecast.png"
+    },
+    "Superstar (0.8%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Superstar.png"
+    },
+    "Wait a Minute (0.8%)": {
+      "price_rub": 522.81,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Wait%20a%20Minute.png"
+    },
+    "Anniversary (0.8%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Anniversary.png"
+    },
+    "Sparkler (0.8%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Sparkler.png"
+    },
+    "Festive Day (0.8%)": {
+      "price_rub": 655.26,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Festive%20Day.png"
+    },
+    "Donut Cream (0.8%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Donut%20Cream.png"
+    },
+    "Jelly Bubble (0.8%)": {
+      "price_rub": 487.96,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Jelly%20Bubble.png"
+    },
+    "Jelly Desert (0.8%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Jelly%20Desert.png"
+    },
+    "Silver Year (1%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Silver%20Year.png"
+    },
+    "Golden Age (1%)": {
+      "price_rub": 569.28,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Golden%20Age.png"
+    },
+    "Black Ink (1%)": {
+      "price_rub": 564.63,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Black%20Ink.png"
+    },
+    "Poltergeist (1%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Poltergeist.png"
+    },
+    "Old Cartoon (1%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Old%20Cartoon.png"
+    },
+    "Rainbow (1%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Rainbow.png"
+    },
+    "Shine On (1%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Shine%20On.png"
+    },
+    "Steel Strong (1%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Steel%20Strong.png"
+    },
+    "Pop Tart (1%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Pop%20Tart.png"
+    },
+    "Bronze Age (1%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Bronze%20Age.png"
+    },
+    "Choco Wax (1%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Choco%20Wax.png"
+    },
+    "Pop Art (1%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Pop%20Art.png"
+    },
+    "Blue Caramel (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Blue%20Caramel.png"
+    },
+    "Pinky Dream (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Pinky%20Dream.png"
+    },
+    "Lolipop (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Lolipop.png"
+    },
+    "Tender Flame (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Tender%20Flame.png"
+    },
+    "Midnight (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Midnight.png"
+    },
+    "Tropicana (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Tropicana.png"
+    },
+    "Happy Flame (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Happy%20Flame.png"
+    },
+    "Orange Mood (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Orange%20Mood.png"
+    },
+    "Magic Powers (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Magic%20Powers.png"
+    },
+    "Dream Big (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Dream%20Big.png"
+    },
+    "Starry Night (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Starry%20Night.png"
+    },
+    "Jage Crystal (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Jage%20Crystal.png"
+    },
+    "Juicy Ginger (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Juicy%20Ginger.png"
+    },
+    "Rose Mint (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Rose%20Mint.png"
+    },
+    "Princess (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Princess.png"
+    },
+    "Wicked (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Wicked.png"
+    },
+    "Fresh Mint (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Fresh%20Mint.png"
+    },
+    "Citrus Candy (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Citrus%20Candy.png"
+    },
+    "Glittery Day (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Glittery%20Day.png"
+    },
+    "Warm Wick (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Warm%20Wick.png"
+    },
+    "Peachy (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Peachy.png"
+    },
+    "Pastel Spark (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Pastel%20Spark.png"
+    },
+    "Icy Pink (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Icy%20Pink.png"
+    },
+    "Multicolor (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Multicolor.png"
+    },
+    "Pear Cocktail (1.2%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Pear%20Cocktail.png"
+    },
+    "Twilight Beam (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Twilight%20Beam.png"
+    },
+    "Forever Young (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Forever%20Young.png"
+    },
+    "Confetti (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Confetti.png"
+    },
+    "Icicle (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Icicle.png"
+    },
+    "Candy Message (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Candy%20Message.png"
+    },
+    "Golden Hour (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Golden%20Hour.png"
+    },
+    "Festive (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Festive.png"
+    },
+    "Be Awesome! (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Be%20Awesome%21.png"
+    },
+    "Sweet Glaze (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Sweet%20Glaze.png"
+    },
+    "Moon Wish (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Moon%20Wish.png"
+    },
+    "Ice Crackle (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Ice%20Crackle.png"
+    },
+    "Cheers (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Cheers.png"
+    },
+    "Wax Glow (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Wax%20Glow.png"
+    },
+    "Tropic Dream (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Tropic%20Dream.png"
+    },
+    "Wee Hours (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Wee%20Hours.png"
+    },
+    "Cotton Candy (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Cotton%20Candy.png"
+    },
+    "Eternal Glow (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Eternal%20Glow.png"
+    },
+    "Spring Meadow (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Spring%20Meadow.png"
+    },
+    "Stardust (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Stardust.png"
+    },
+    "Shine Bright (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Shine%20Bright.png"
+    },
+    "Sugar Party (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Sugar%20Party.png"
+    },
+    "Bright Side (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Bright%20Side.png"
+    },
+    "Summer Walk (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Summer%20Walk.png"
+    },
+    "Best Wishes (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Best%20Wishes.png"
+    },
+    "Winter Noon (1.5%)": {
+      "price_rub": 464.72,
+      "image_url": "https://gifts.coffin.meme/b-day%20candle/Winter%20Noon.png"
+    }
+  },
+  "Berry Box": {
+    "Sweet Kiss (0.5%)": {
+      "price_rub": 3717.76,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Sweet%20Kiss.png"
+    },
+    "Berrific (0.5%)": {
+      "price_rub": 4066.3,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Berrific.png"
+    },
+    "Lady Bites (0.5%)": {
+      "price_rub": 3020.68,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Lady%20Bites.png"
+    },
+    "Bumberries (0.5%)": {
+      "price_rub": 3448.22,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Bumberries.png"
+    },
+    "Megabite (0.5%)": {
+      "price_rub": 3715.44,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Megabite.png"
+    },
+    "Lovely Bites (1%)": {
+      "price_rub": 3229.8,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Lovely%20Bites.png"
+    },
+    "Natural (1%)": {
+      "price_rub": 1905.35,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Natural.png"
+    },
+    "Infrared (1%)": {
+      "price_rub": 1858.88,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Infrared.png"
+    },
+    "Canis Major (1%)": {
+      "price_rub": 2305.01,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Canis%20Major.png"
+    },
+    "Zomberry (1%)": {
+      "price_rub": 2172.57,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Zomberry.png"
+    },
+    "Berryllium (1%)": {
+      "price_rub": 1951.82,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Berryllium.png"
+    },
+    "Spring (1%)": {
+      "price_rub": 1882.12,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Spring.png"
+    },
+    "Mood Ring (1%)": {
+      "price_rub": 1977.38,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Mood%20Ring.png"
+    },
+    "Anniversary (1%)": {
+      "price_rub": 1624.2,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Anniversary.png"
+    },
+    "Wedded (1%)": {
+      "price_rub": 1603.28,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Wedded.png"
+    },
+    "Sketchy (1%)": {
+      "price_rub": 1905.35,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Sketchy.png"
+    },
+    "Kawaii (1%)": {
+      "price_rub": 1858.88,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Kawaii.png"
+    },
+    "High Voltage (1%)": {
+      "price_rub": 1742.7,
+      "image_url": "https://gifts.coffin.meme/berry%20box/High%20Voltage.png"
+    },
+    "Strobe (1%)": {
+      "price_rub": 2114.48,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Strobe.png"
+    },
+    "Nature Box (1%)": {
+      "price_rub": 2321.28,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Nature%20Box.png"
+    },
+    "Noir (1%)": {
+      "price_rub": 1847.26,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Noir.png"
+    },
+    "Art Project (1%)": {
+      "price_rub": 1510.34,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Art%20Project.png"
+    },
+    "Harlequin (1%)": {
+      "price_rub": 1858.88,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Harlequin.png"
+    },
+    "Lovestorm (1%)": {
+      "price_rub": 1751.99,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Lovestorm.png"
+    },
+    "Glitchberry (1%)": {
+      "price_rub": 2555.96,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Glitchberry.png"
+    },
+    "Rose Gold (1.5%)": {
+      "price_rub": 1417.4,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Rose%20Gold.png"
+    },
+    "Gryffindor (1.5%)": {
+      "price_rub": 1487.1,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Gryffindor.png"
+    },
+    "Glimglam (1.5%)": {
+      "price_rub": 1847.26,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Glimglam.png"
+    },
+    "Sine Wave (1.5%)": {
+      "price_rub": 1429.01,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Sine%20Wave.png"
+    },
+    "Cupid (1.5%)": {
+      "price_rub": 1882.12,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Cupid.png"
+    },
+    "Rawberry (1.5%)": {
+      "price_rub": 2323.6,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Rawberry.png"
+    },
+    "Bowtied (1.5%)": {
+      "price_rub": 1452.25,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Bowtied.png"
+    },
+    "Frosty Icing (1.5%)": {
+      "price_rub": 1626.52,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Frosty%20Icing.png"
+    },
+    "Alpha (1.5%)": {
+      "price_rub": 1742.7,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Alpha.png"
+    },
+    "Starberry (1.5%)": {
+      "price_rub": 1928.59,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Starberry.png"
+    },
+    "Sweet Game (1.5%)": {
+      "price_rub": 2425.84,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Sweet%20Game.png"
+    },
+    "Comic Book (1.5%)": {
+      "price_rub": 1789.17,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Comic%20Book.png"
+    },
+    "Unicorns (1.5%)": {
+      "price_rub": 1858.88,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Unicorns.png"
+    },
+    "Teeth Crush (1.5%)": {
+      "price_rub": 1510.34,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Teeth%20Crush.png"
+    },
+    "Lemon Lime (1.5%)": {
+      "price_rub": 1626.52,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Lemon%20Lime.png"
+    },
+    "Confetti (1.5%)": {
+      "price_rub": 1905.35,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Confetti.png"
+    },
+    "Clarity (1.5%)": {
+      "price_rub": 1654.4,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Clarity.png"
+    },
+    "Atmosphere (1.5%)": {
+      "price_rub": 1510.34,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Atmosphere.png"
+    },
+    "Tuxedo (1.5%)": {
+      "price_rub": 1835.64,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Tuxedo.png"
+    },
+    "Anatomy (1.5%)": {
+      "price_rub": 1975.06,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Anatomy.png"
+    },
+    "Lovey Dovey (1.5%)": {
+      "price_rub": 1672.99,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Lovey%20Dovey.png"
+    },
+    "Martian (1.5%)": {
+      "price_rub": 1624.2,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Martian.png"
+    },
+    "Ice Diamond (1.5%)": {
+      "price_rub": 1603.28,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Ice%20Diamond.png"
+    },
+    "Extra Berry (1.5%)": {
+      "price_rub": 1391.84,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Extra%20Berry.png"
+    },
+    "Milky Cows (1.5%)": {
+      "price_rub": 1858.88,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Milky%20Cows.png"
+    },
+    "Purple Ribbon (2%)": {
+      "price_rub": 1814.73,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Purple%20Ribbon.png"
+    },
+    "Fresh (2%)": {
+      "price_rub": 1626.52,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Fresh.png"
+    },
+    "Refraction (2%)": {
+      "price_rub": 1487.1,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Refraction.png"
+    },
+    "Manga (2%)": {
+      "price_rub": 1533.58,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Manga.png"
+    },
+    "Luxury (2%)": {
+      "price_rub": 11618.0,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Luxury.png"
+    },
+    "Iridescent (2%)": {
+      "price_rub": 1742.7,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Iridescent.png"
+    },
+    "RGBerry (2%)": {
+      "price_rub": 2079.62,
+      "image_url": "https://gifts.coffin.meme/berry%20box/RGBerry.png"
+    },
+    "Eiffel 95 (2%)": {
+      "price_rub": 1800.79,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Eiffel%2095.png"
+    },
+    "Rarity (2%)": {
+      "price_rub": 1510.34,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Rarity.png"
+    },
+    "White Cocoa (2%)": {
+      "price_rub": 1626.52,
+      "image_url": "https://gifts.coffin.meme/berry%20box/White%20Cocoa.png"
+    },
+    "Chillberry (2%)": {
+      "price_rub": 1672.99,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Chillberry.png"
+    },
+    "Baubles (2%)": {
+      "price_rub": 1429.01,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Baubles.png"
+    },
+    "Foraged (2%)": {
+      "price_rub": 1626.52,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Foraged.png"
+    },
+    "Sweet Star (2%)": {
+      "price_rub": 1463.87,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Sweet%20Star.png"
+    },
+    "Ribbons (2%)": {
+      "price_rub": 1429.01,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Ribbons.png"
+    },
+    "Pointilism (2%)": {
+      "price_rub": 1858.88,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Pointilism.png"
+    },
+    "Valentine (2%)": {
+      "price_rub": 1429.01,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Valentine.png"
+    },
+    "Golden Dip (2%)": {
+      "price_rub": 1624.2,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Golden%20Dip.png"
+    },
+    "Magenta (2%)": {
+      "price_rub": 1510.34,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Magenta.png"
+    },
+    "Paparazzi (2%)": {
+      "price_rub": 1463.87,
+      "image_url": "https://gifts.coffin.meme/berry%20box/Paparazzi.png"
+    }
+  },
+  "Big Year": {
+    "Creator (0.5%)": {
+      "price_rub": 1626.52,
+      "image_url": "https://gifts.coffin.meme/big%20year/Creator.png"
+    },
+    "Gold Mine (0.5%)": {
+      "price_rub": 3136.86,
+      "image_url": "https://gifts.coffin.meme/big%20year/Gold%20Mine.png"
+    },
+    "The Nether (0.5%)": {
+      "price_rub": 1742.7,
+      "image_url": "https://gifts.coffin.meme/big%20year/The%20Nether.png"
+    },
+    "Jelly Year (0.5%)": {
+      "price_rub": 1394.16,
+      "image_url": "https://gifts.coffin.meme/big%20year/Jelly%20Year.png"
+    },
+    "Game Boy (0.5%)": {
+      "price_rub": 1975.06,
+      "image_url": "https://gifts.coffin.meme/big%20year/Game%20Boy.png"
+    },
+    "The Hobbit (0.6%)": {
+      "price_rub": 3345.98,
+      "image_url": "https://gifts.coffin.meme/big%20year/The%20Hobbit.png"
+    },
+    "Cheshire Cat (0.6%)": {
+      "price_rub": 1231.51,
+      "image_url": "https://gifts.coffin.meme/big%20year/Cheshire%20Cat.png"
+    },
+    "Balloons (0.6%)": {
+      "price_rub": 836.5,
+      "image_url": "https://gifts.coffin.meme/big%20year/Balloons.png"
+    },
+    "King of Pop (0.6%)": {
+      "price_rub": 1161.8,
+      "image_url": "https://gifts.coffin.meme/big%20year/King%20of%20Pop.png"
+    },
+    "Sir Chaplin (0.6%)": {
+      "price_rub": 1161.8,
+      "image_url": "https://gifts.coffin.meme/big%20year/Sir%20Chaplin.png"
+    },
+    "Sputnik-1 (1.2%)": {
+      "price_rub": 1287.27,
+      "image_url": "https://gifts.coffin.meme/big%20year/Sputnik-1.png"
+    },
+    "Toon Family (1.2%)": {
+      "price_rub": 1161.8,
+      "image_url": "https://gifts.coffin.meme/big%20year/Toon%20Family.png"
+    },
+    "Telegram (1.2%)": {
+      "price_rub": 3950.12,
+      "image_url": "https://gifts.coffin.meme/big%20year/Telegram.png"
+    },
+    "Sherlock (1.2%)": {
+      "price_rub": 929.44,
+      "image_url": "https://gifts.coffin.meme/big%20year/Sherlock.png"
+    },
+    "Original Cola (1.2%)": {
+      "price_rub": 1052.59,
+      "image_url": "https://gifts.coffin.meme/big%20year/Original%20Cola.png"
+    },
+    "Zombie Film (1.2%)": {
+      "price_rub": 906.2,
+      "image_url": "https://gifts.coffin.meme/big%20year/Zombie%20Film.png"
+    },
+    "Frida Kahlo (1.2%)": {
+      "price_rub": 906.2,
+      "image_url": "https://gifts.coffin.meme/big%20year/Frida%20Kahlo.png"
+    },
+    "Van Gogh (1.8%)": {
+      "price_rub": 780.73,
+      "image_url": "https://gifts.coffin.meme/big%20year/Van%20Gogh.png"
+    },
+    "Mauveine (1.8%)": {
+      "price_rub": 882.97,
+      "image_url": "https://gifts.coffin.meme/big%20year/Mauveine.png"
+    },
+    "A New Hope (1.8%)": {
+      "price_rub": 882.97,
+      "image_url": "https://gifts.coffin.meme/big%20year/A%20New%20Hope.png"
+    },
+    "AC/DC (1.8%)": {
+      "price_rub": 882.97,
+      "image_url": "https://gifts.coffin.meme/big%20year/AC/DC.png"
+    },
+    "First Website (1.8%)": {
+      "price_rub": 1057.24,
+      "image_url": "https://gifts.coffin.meme/big%20year/First%20Website.png"
+    },
+    "Qing Dynasty (1.8%)": {
+      "price_rub": 3136.86,
+      "image_url": "https://gifts.coffin.meme/big%20year/Qing%20Dynasty.png"
+    },
+    "Covid-19 (1.8%)": {
+      "price_rub": 1394.16,
+      "image_url": "https://gifts.coffin.meme/big%20year/Covid-19.png"
+    },
+    "Einstein (1.8%)": {
+      "price_rub": 871.35,
+      "image_url": "https://gifts.coffin.meme/big%20year/Einstein.png"
+    },
+    "Big Brother (1.8%)": {
+      "price_rub": 2311.98,
+      "image_url": "https://gifts.coffin.meme/big%20year/Big%20Brother.png"
+    },
+    "Da Vinci (1.8%)": {
+      "price_rub": 766.79,
+      "image_url": "https://gifts.coffin.meme/big%20year/Da%20Vinci.png"
+    },
+    "First Flight (1.8%)": {
+      "price_rub": 929.44,
+      "image_url": "https://gifts.coffin.meme/big%20year/First%20Flight.png"
+    },
+    "Salvador Dali (1.8%)": {
+      "price_rub": 906.2,
+      "image_url": "https://gifts.coffin.meme/big%20year/Salvador%20Dali.png"
+    },
+    "War and Peace (1.8%)": {
+      "price_rub": 906.2,
+      "image_url": "https://gifts.coffin.meme/big%20year/War%20and%20Peace.png"
+    },
+    "YouTubes (2.1%)": {
+      "price_rub": 1452.25,
+      "image_url": "https://gifts.coffin.meme/big%20year/YouTubes.png"
+    },
+    "Steve Jobs (2.3%)": {
+      "price_rub": 1138.56,
+      "image_url": "https://gifts.coffin.meme/big%20year/Steve%20Jobs.png"
+    },
+    "Columbus (2.3%)": {
+      "price_rub": 899.23,
+      "image_url": "https://gifts.coffin.meme/big%20year/Columbus.png"
+    },
+    "Frankenstein (2.3%)": {
+      "price_rub": 882.97,
+      "image_url": "https://gifts.coffin.meme/big%20year/Frankenstein.png"
+    },
+    "Fallout (2.3%)": {
+      "price_rub": 1045.62,
+      "image_url": "https://gifts.coffin.meme/big%20year/Fallout.png"
+    },
+    "Nostradamus (2.3%)": {
+      "price_rub": 957.32,
+      "image_url": "https://gifts.coffin.meme/big%20year/Nostradamus.png"
+    },
+    "Industrial (2.3%)": {
+      "price_rub": 882.97,
+      "image_url": "https://gifts.coffin.meme/big%20year/Industrial.png"
+    },
+    "Bikini Bottom (2.3%)": {
+      "price_rub": 1020.06,
+      "image_url": "https://gifts.coffin.meme/big%20year/Bikini%20Bottom.png"
+    },
+    "Night Bat (2.3%)": {
+      "price_rub": 882.97,
+      "image_url": "https://gifts.coffin.meme/big%20year/Night%20Bat.png"
+    },
+    "Wizard Boy (2.3%)": {
+      "price_rub": 929.44,
+      "image_url": "https://gifts.coffin.meme/big%20year/Wizard%20Boy.png"
+    },
+    "Christmas Carol (2.3%)": {
+      "price_rub": 790.02,
+      "image_url": "https://gifts.coffin.meme/big%20year/Christmas%20Carol.png"
+    },
+    "Pavel Durov (2.3%)": {
+      "price_rub": 5806.68,
+      "image_url": "https://gifts.coffin.meme/big%20year/Pavel%20Durov.png"
+    },
+    "Nuclein (2.3%)": {
+      "price_rub": 766.79,
+      "image_url": "https://gifts.coffin.meme/big%20year/Nuclein.png"
+    },
+    "Periodic Table (2.3%)": {
+      "price_rub": 836.5,
+      "image_url": "https://gifts.coffin.meme/big%20year/Periodic%20Table.png"
+    },
+    "Picasso (2.3%)": {
+      "price_rub": 778.41,
+      "image_url": "https://gifts.coffin.meme/big%20year/Picasso.png"
+    },
+    "Spider Sense (2.3%)": {
+      "price_rub": 929.44,
+      "image_url": "https://gifts.coffin.meme/big%20year/Spider%20Sense.png"
+    },
+    "Freddy (2.9%)": {
+      "price_rub": 743.55,
+      "image_url": "https://gifts.coffin.meme/big%20year/Freddy.png"
+    },
+    "2048 (2.9%)": {
+      "price_rub": 790.02,
+      "image_url": "https://gifts.coffin.meme/big%20year/2048.png"
+    },
+    "Retrowave (2.9%)": {
+      "price_rub": 1085.12,
+      "image_url": "https://gifts.coffin.meme/big%20year/Retrowave.png"
+    },
+    "Cyberpunk (2.9%)": {
+      "price_rub": 929.44,
+      "image_url": "https://gifts.coffin.meme/big%20year/Cyberpunk.png"
+    },
+    "Walking Dead (2.9%)": {
+      "price_rub": 1092.09,
+      "image_url": "https://gifts.coffin.meme/big%20year/Walking%20Dead.png"
+    },
+    "Pokeball (2.9%)": {
+      "price_rub": 1580.05,
+      "image_url": "https://gifts.coffin.meme/big%20year/Pokeball.png"
+    },
+    "Matrix (2.9%)": {
+      "price_rub": 1022.38,
+      "image_url": "https://gifts.coffin.meme/big%20year/Matrix.png"
+    },
+    "Emo Music (2.9%)": {
+      "price_rub": 1185.04,
+      "image_url": "https://gifts.coffin.meme/big%20year/Emo%20Music.png"
+    },
+    "Bitcoin (2.9%)": {
+      "price_rub": 4647.2,
+      "image_url": "https://gifts.coffin.meme/big%20year/Bitcoin.png"
+    }
+  },
+  "bonded_ring": {
+    "Ring of Roots (0.3%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Ring%20of%20Roots.png"
+    },
+    "Asteroid (0.4%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Asteroid.png"
+    },
+    "Goldsmith (0.4%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Goldsmith.png"
+    },
+    "Hourglass (0.8%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Hourglass.png"
+    },
+    "Neo Matrix (0.8%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Neo%20Matrix.png"
+    },
+    "Spatial Grid (0.8%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Spatial%20Grid.png"
+    },
+    "Metal Forever (1.2%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Metal%20Forever.png"
+    },
+    "Stratosphere (1.2%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Stratosphere.png"
+    },
+    "Thunder Bolt (1.2%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Thunder%20Bolt.png"
+    },
+    "Highway (1.2%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Highway.png"
+    },
+    "Fireball (1.2%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Fireball.png"
+    },
+    "Moon Dust (1.2%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Moon%20Dust.png"
+    },
+    "Space Inside (1.8%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Space%20Inside.png"
+    },
+    "Kraken's Grip (1.8%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Kraken%27s%20Grip.png"
+    },
+    "Golden Star (1.8%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Golden%20Star.png"
+    },
+    "Cat Bed (1.8%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Cat%20Bed.png"
+    },
+    "Froge Ring (1.8%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Froge%20Ring.png"
+    },
+    "Duckling (1.8%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Duckling.png"
+    },
+    "Rainbow (1.8%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Rainbow.png"
+    },
+    "Hamster Wheel (1.8%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Hamster%20Wheel.png"
+    },
+    "Soap Bubbles (1.8%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Soap%20Bubbles.png"
+    },
+    "Cheese (1.8%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Cheese.png"
+    },
+    "Anaconda (1.8%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Anaconda.png"
+    },
+    "Mouse Wheel (1.8%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Mouse%20Wheel.png"
+    },
+    "Neon Pulse (1.8%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Neon%20Pulse.png"
+    },
+    "Hot Wheel (1.8%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Hot%20Wheel.png"
+    },
+    "Pixel Loot (1.8%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Pixel%20Loot.png"
+    },
+    "Neo Tribe (2.1%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Neo%20Tribe.png"
+    },
+    "Atomic Core (2.1%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Atomic%20Core.png"
+    },
+    "Astro Silver (2.1%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Astro%20Silver.png"
+    },
+    "Ironwood (2.1%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Ironwood.png"
+    },
+    "Dalmatian (2.1%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Dalmatian.png"
+    },
+    "Magic Runes (2.1%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Magic%20Runes.png"
+    },
+    "Rainbow Halo (2.1%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Rainbow%20Halo.png"
+    },
+    "Zebra (2.1%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Zebra.png"
+    },
+    "Tiger Amulet (2.1%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Tiger%20Amulet.png"
+    },
+    "Duo Vision (2.1%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Duo%20Vision.png"
+    },
+    "Runewood (2.1%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Runewood.png"
+    },
+    "Solid Magma (2.1%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Solid%20Magma.png"
+    },
+    "Eclipse (2.1%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Eclipse.png"
+    },
+    "Lime Factory (3.5%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Lime%20Factory.png"
+    },
+    "Leopard (3.5%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Leopard.png"
+    },
+    "Love Whisper (3.5%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Love%20Whisper.png"
+    },
+    "Black Hole (3.5%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Black%20Hole.png"
+    },
+    "Frostband (3.5%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Frostband.png"
+    },
+    "Miami Art (3.5%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Miami%20Art.png"
+    },
+    "Bloody Mary (3.5%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Bloody%20Mary.png"
+    },
+    "Yin Yang (3.5%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Yin%20Yang.png"
+    },
+    "Spectrum (3.5%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Spectrum.png"
+    },
+    "Line Art (3.5%)": {
+      "price_rub": null,
+      "image_url": "https://gifts.coffin.meme/bonded_ring/Line%20Art.png"
+    }
+  }
+}
