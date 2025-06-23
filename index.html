@@ -206,7 +206,6 @@
         </div>
     </div>
 
-
     <script>
         const tg = window.Telegram.WebApp;
         console.log("WebApp script loaded. Telegram object:", tg);
@@ -232,16 +231,21 @@
             tg.setHeaderColor('#0a192f');
         });
 
-        // ... (остальные функции рендеринга и управления состоянием остаются без изменений) ...
         function loadState() {
-            state.balance = parseFloat(localStorage.getItem('userBalance') || '0');
-            state.cart = JSON.parse(localStorage.getItem('userCart') || '{}');
+            // Используем временное хранение в переменных вместо localStorage
+            const savedBalance = sessionStorage.getItem('userBalance');
+            const savedCart = sessionStorage.getItem('userCart');
+            
+            state.balance = savedBalance ? parseFloat(savedBalance) : 0;
+            state.cart = savedCart ? JSON.parse(savedCart) : {};
+            
             updateBalanceDisplay();
             updateCartBadge();
         }
+        
         function saveState() {
-            localStorage.setItem('userBalance', state.balance.toString());
-            localStorage.setItem('userCart', JSON.stringify(state.cart));
+            sessionStorage.setItem('userBalance', state.balance.toString());
+            sessionStorage.setItem('userCart', JSON.stringify(state.cart));
         }
 
         async function fetchGifts() {
@@ -367,10 +371,12 @@
             if (state.currentView === 'cart-view') renderCart();
             saveState();
         }
+        
         function addToCart(giftId) {
             updateCart(giftId, 1);
             tg.HapticFeedback.notificationOccurred('success');
         }
+        
         function updateCartBadge() {
             const badge = document.getElementById('cart-badge-nav');
             const totalItems = Object.values(state.cart).reduce((sum, qty) => sum + qty, 0);
@@ -397,12 +403,12 @@
                  document.querySelector(`.nav-item[onclick="showView('shop-view')"]`).classList.add('active');
             }
         }
+        
         function showGiftDetails(categoryName) {
             renderGiftDetails(categoryName);
             showView('gift-detail-view');
         }
 
-        // --- ДЕБАГ-ВЕРСИЯ КЛЮЧЕВЫХ ФУНКЦИЙ ---
         function sendDataToBot(data) {
             console.log("Вызвана функция sendDataToBot с данными:", data);
             if (tg.sendData) {
@@ -410,7 +416,7 @@
                     console.log("Попытка выполнить tg.sendData()...");
                     tg.sendData(JSON.stringify(data));
                     console.log("tg.sendData() выполнена. Попытка закрыть окно tg.close()...");
-                    // tg.close(); // Временно закомментируем, чтобы видеть логи
+                    tg.close();
                 } catch (error) {
                     console.error('КРИТИЧЕСКАЯ ОШИБКА в tg.sendData:', error);
                     tg.showAlert(`КРИТИЧЕСКАЯ ОШИБКА в tg.sendData: ${error.message}`);
@@ -439,14 +445,19 @@
             tg.showPopup({
                 title: 'Подтверждение',
                 message: `Вы уверены, что хотите продать предметы на сумму ${total.toFixed(2)} RUB? Деньги будут зачислены на ваш внутренний баланс.`,
-                buttons: [{type: 'ok', text: 'Продать'}, {type: 'cancel'}]
-            }, (isOk) => {
-                console.log(`Коллбэк tg.showPopup. Пользователь нажал 'ok': ${isOk}`);
-                if (isOk) {
+                buttons: [
+                    {id: 'confirm', type: 'ok', text: 'Продать'}, 
+                    {id: 'cancel', type: 'cancel', text: 'Отмена'}
+                ]
+            }, (buttonId) => {
+                console.log(`Коллбэк tg.showPopup. Пользователь нажал кнопку с ID: '${buttonId}'`);
+                if (buttonId === 'confirm') {
                     const dataToSend = { type: 'SELL_REQUEST', cart: state.cart, total: total };
                     console.log("Пользователь подтвердил продажу. Подготовка к отправке данных:", dataToSend);
                     state.balance += total;
                     state.cart = {};
+                    updateCartBadge();
+                    updateBalanceDisplay();
                     saveState();
                     sendDataToBot(dataToSend);
                 } else {
@@ -455,7 +466,6 @@
             });
         }
         
-        // ... (остальные функции остаются без изменений)
         function buyPremium(months) {
             const price = PREMIUM_PRICES[months];
             if (state.balance < price) {
@@ -463,14 +473,18 @@
                 return;
             }
             
-             tg.showPopup({
+            tg.showPopup({
                 title: 'Покупка Premium',
                 message: `С вашего баланса будет списано ${price.toFixed(2)} RUB за ${months} мес. подписки. Продолжить?`,
-                buttons: [{type: 'ok', text: 'Да'}, {type: 'cancel'}]
-            }, (isOk) => {
-                if(isOk) {
+                buttons: [
+                    {id: 'confirm', type: 'ok', text: 'Да'}, 
+                    {id: 'cancel', type: 'cancel', text: 'Отмена'}
+                ]
+            }, (buttonId) => {
+                if(buttonId === 'confirm') {
                     const dataToSend = { type: 'PREMIUM_PURCHASE', months: months, price: price };
                     state.balance -= price;
+                    updateBalanceDisplay();
                     saveState();
                     sendDataToBot(dataToSend);
                 }
@@ -497,11 +511,15 @@
             tg.showPopup({
                 title: 'Подтверждение вывода',
                 message: `Создать заявку на вывод ${amount.toFixed(2)} RUB? Эта сумма будет списана с вашего баланса.`,
-                buttons: [{type: 'ok', text: 'Да'}, {type: 'cancel'}]
-            }, (isOk) => {
-                 if(isOk) {
+                buttons: [
+                    {id: 'confirm', type: 'ok', text: 'Да'}, 
+                    {id: 'cancel', type: 'cancel', text: 'Отмена'}
+                ]
+            }, (buttonId) => {
+                if(buttonId === 'confirm') {
                     const dataToSend = { type: 'WITHDRAW_REQUEST', amount: amount.toFixed(2), paymentDetails: paymentDetails };
                     state.balance -= amount;
+                    updateBalanceDisplay();
                     saveState();
                     event.target.reset();
                     sendDataToBot(dataToSend);
