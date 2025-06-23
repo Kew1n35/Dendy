@@ -24,92 +24,22 @@
             background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
             background-attachment: fixed;
             color: var(--text-primary);
-            padding-bottom: 80px; /* Отступ для нижней навигации */
+            padding-bottom: 80px;
         }
-        .btn-primary {
-            background-color: var(--accent);
-            color: #ffffff;
-            transition: background-color 0.3s;
-        }
-        .btn-primary:hover:not(:disabled) {
-            background-color: var(--accent-hover);
-        }
-        .btn-primary:disabled {
-            background-color: #4a5568;
-            cursor: not-allowed;
-        }
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            transition: transform 0.2s, box-shadow 0.2s;
-            backdrop-filter: blur(8px);
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 170, 255, 0.1);
-        }
-        input, select {
-            background-color: var(--bg-start);
-            border: 1px solid #2c3e50;
-            color: var(--text-primary);
-        }
+        .btn-primary { background-color: var(--accent); color: #ffffff; transition: background-color 0.3s; }
+        .btn-primary:hover:not(:disabled) { background-color: var(--accent-hover); }
+        .btn-primary:disabled { background-color: #4a5568; cursor: not-allowed; }
+        .card { background-color: var(--card-bg); border: 1px solid var(--border-color); transition: transform 0.2s, box-shadow 0.2s; backdrop-filter: blur(8px); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 170, 255, 0.1); }
+        input, select { background-color: var(--bg-start); border: 1px solid #2c3e50; color: var(--text-primary); }
         input::placeholder, select { color: var(--text-secondary); }
-        .view-section {
-            display: none;
-            animation: fadeIn 0.4s ease-in-out;
-            padding: 16px;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .spinner {
-            border-color: transparent;
-            border-top-color: var(--accent);
-            border-right-color: var(--accent);
-        }
-        .bottom-nav {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 65px;
-            background-color: var(--card-bg);
-            border-top: 1px solid var(--border-color);
-            backdrop-filter: blur(10px);
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 1000;
-        }
-        .nav-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: var(--text-secondary);
-            font-size: 12px;
-            transition: color 0.3s;
-            position: relative;
-            cursor: pointer;
-        }
-        .nav-item.active {
-            color: var(--accent);
-        }
-        .nav-item .cart-badge {
-            position: absolute;
-            top: -5px;
-            right: -10px;
-            background-color: #ef4444;
-            color: white;
-            border-radius: 9999px;
-            width: 18px;
-            height: 18px;
-            font-size: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid var(--bg-start);
-        }
+        .view-section { display: none; animation: fadeIn 0.4s ease-in-out; padding: 16px; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        .spinner { border-color: transparent; border-top-color: var(--accent); border-right-color: var(--accent); }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; height: 65px; background-color: var(--card-bg); border-top: 1px solid var(--border-color); backdrop-filter: blur(10px); display: flex; justify-content: space-around; align-items: center; z-index: 1000; }
+        .nav-item { display: flex; flex-direction: column; align-items: center; color: var(--text-secondary); font-size: 12px; transition: color 0.3s; position: relative; cursor: pointer; }
+        .nav-item.active { color: var(--accent); }
+        .nav-item .cart-badge { position: absolute; top: -5px; right: -10px; background-color: #ef4444; color: white; border-radius: 9999px; width: 18px; height: 18px; font-size: 10px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--bg-start); }
     </style>
 </head>
 <body class="antialiased">
@@ -117,6 +47,15 @@
     <div id="app" class="max-w-4xl mx-auto">
 
         <div id="shop-view" class="view-section">
+            <!-- ===== ТЕСТОВАЯ КНОПКА ===== -->
+            <div class="p-4 mb-4 bg-yellow-900/50 border border-yellow-500 rounded-lg text-center">
+                <p class="mb-2 text-yellow-300">Кнопка для отладки</p>
+                <button onclick="handleTestSend()" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
+                    Тест отправки
+                </button>
+            </div>
+            <!-- ========================== -->
+
             <h1 class="text-4xl font-bold mb-8 text-center text-white">Категории</h1>
             <div id="shop-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="col-span-full text-center py-10">
@@ -125,84 +64,12 @@
             </div>
         </div>
         
-        <div id="gift-detail-view" class="view-section">
-             <div class="flex items-center mb-6">
-                <button onclick="showView('shop-view')" class="p-2 rounded-full hover:bg-gray-700/50">
-                    <i class="fas fa-arrow-left text-xl"></i>
-                </button>
-                <h1 id="gift-detail-title" class="text-3xl font-bold ml-4 text-white"></h1>
-            </div>
-            <div id="gift-detail-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"></div>
-        </div>
-        
-        <div id="premium-view" class="view-section">
-             <h1 class="text-4xl font-bold mb-2 text-center text-white">Telegram Premium</h1>
-             <p class="text-center text-gray-400 mb-8">Покупайте подписку за средства с баланса.</p>
-             <div id="premium-container" class="space-y-4"></div>
-        </div>
-
-        <div id="cart-view" class="view-section">
-            <h1 class="text-4xl font-bold mb-8 text-center text-white">Корзина</h1>
-            <div id="cart-items" class="space-y-4"></div>
-            <div id="cart-empty-message" class="hidden text-center py-10">
-                <i class="fas fa-shopping-cart text-5xl text-gray-600"></i>
-                <p class="mt-4 text-lg text-gray-400">Ваша корзина пуста</p>
-            </div>
-            <div id="cart-summary" class="mt-8 pt-4 border-t border-gray-700">
-                <div class="text-2xl font-bold flex justify-between items-center text-white">
-                    <span>Итого:</span>
-                    <span id="cart-total">0.00 RUB</span>
-                </div>
-                <button onclick="handleSellItems()" class="w-full btn-primary font-bold py-3 px-4 rounded-lg mt-6 text-lg">
-                    Продать предметы
-                </button>
-            </div>
-        </div>
-        
-        <div id="balance-view" class="view-section">
-            <h1 class="text-4xl font-bold mb-8 text-center text-white">Баланс</h1>
-            <div class="text-center mb-10 card p-6 rounded-lg">
-                <p class="text-lg text-gray-400">Текущий баланс</p>
-                <p class="text-5xl font-bold text-white mt-2"><span id="balance-amount">0.00</span> RUB</p>
-            </div>
-            
-            <h2 class="text-2xl font-bold mb-4 text-white">Вывод средств</h2>
-            <form id="withdraw-form" class="space-y-6 card p-6 rounded-lg">
-                 <div>
-                    <label for="withdraw-amount" class="block text-sm font-medium text-gray-400 mb-1">Сумма вывода</label>
-                    <input type="number" id="withdraw-amount" placeholder="0.00" class="w-full rounded-md py-3 px-4" required>
-                </div>
-                <div>
-                    <label for="payment-method" class="block text-sm font-medium text-gray-400 mb-1">Способ выплаты</label>
-                    <select id="payment-method" class="w-full rounded-md shadow-sm py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]">
-                        <option value="card">Банковская карта</option>
-                        <option value="sbp">СБП (по номеру телефона)</option>
-                    </select>
-                </div>
-                <div id="card-details">
-                    <input type="text" id="card-number" placeholder="Номер карты" class="w-full rounded-md py-3 px-4" required>
-                    <input type="text" id="bank-name-card" placeholder="Название банка" class="w-full rounded-md py-3 px-4 mt-4" required>
-                </div>
-                <div id="sbp-details" class="hidden">
-                     <input type="tel" id="phone-number" placeholder="Номер телефона" class="w-full rounded-md py-3 px-4">
-                     <input type="text" id="bank-name-sbp" placeholder="Название банка" class="w-full rounded-md py-3 px-4 mt-4">
-                </div>
-                 <p class="text-xs text-center text-gray-400 pt-2">Вывод средств может занять от 5 минут до 24 часов.</p>
-                <button type="submit" class="w-full btn-primary font-bold py-3 px-4 rounded-lg text-lg">
-                    Создать заявку на вывод
-                </button>
-            </form>
-        </div>
-        
-        <div id="confirmation-view" class="view-section text-center py-16">
-            <i class="fas fa-check-circle text-7xl text-green-400 mb-6"></i>
-            <h1 id="confirmation-title" class="text-4xl font-bold mb-4 text-white"></h1>
-            <p id="confirmation-message" class="text-gray-400 max-w-sm mx-auto"></p>
-            <button onclick="showView('shop-view')" class="w-full max-w-xs mx-auto bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-4 rounded-lg mt-10 text-lg">
-                Отлично
-            </button>
-        </div>
-
+        <!-- ... остальной HTML-код без изменений до секции <script> ... -->
+        <div id="gift-detail-view" class="view-section"> <div class="flex items-center mb-6"> <button onclick="showView('shop-view')" class="p-2 rounded-full hover:bg-gray-700/50"> <i class="fas fa-arrow-left text-xl"></i> </button> <h1 id="gift-detail-title" class="text-3xl font-bold ml-4 text-white"></h1> </div> <div id="gift-detail-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"></div> </div>
+        <div id="premium-view" class="view-section"> <h1 class="text-4xl font-bold mb-2 text-center text-white">Telegram Premium</h1> <p class="text-center text-gray-400 mb-8">Покупайте подписку за средства с баланса.</p> <div id="premium-container" class="space-y-4"></div> </div>
+        <div id="cart-view" class="view-section"> <h1 class="text-4xl font-bold mb-8 text-center text-white">Корзина</h1> <div id="cart-items" class="space-y-4"></div> <div id="cart-empty-message" class="hidden text-center py-10"> <i class="fas fa-shopping-cart text-5xl text-gray-600"></i> <p class="mt-4 text-lg text-gray-400">Ваша корзина пуста</p> </div> <div id="cart-summary" class="mt-8 pt-4 border-t border-gray-700"> <div class="text-2xl font-bold flex justify-between items-center text-white"> <span>Итого:</span> <span id="cart-total">0.00 RUB</span> </div> <button onclick="handleSellItems()" class="w-full btn-primary font-bold py-3 px-4 rounded-lg mt-6 text-lg"> Продать предметы </button> </div> </div>
+        <div id="balance-view" class="view-section"> <h1 class="text-4xl font-bold mb-8 text-center text-white">Баланс</h1> <div class="text-center mb-10 card p-6 rounded-lg"> <p class="text-lg text-gray-400">Текущий баланс</p> <p class="text-5xl font-bold text-white mt-2"><span id="balance-amount">0.00</span> RUB</p> </div> <h2 class="text-2xl font-bold mb-4 text-white">Вывод средств</h2> <form id="withdraw-form" class="space-y-6 card p-6 rounded-lg"> <div> <label for="withdraw-amount" class="block text-sm font-medium text-gray-400 mb-1">Сумма вывода</label> <input type="number" id="withdraw-amount" placeholder="0.00" class="w-full rounded-md py-3 px-4" required> </div> <div> <label for="payment-method" class="block text-sm font-medium text-gray-400 mb-1">Способ выплаты</label> <select id="payment-method" class="w-full rounded-md shadow-sm py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"> <option value="card">Банковская карта</option> <option value="sbp">СБП (по номеру телефона)</option> </select> </div> <div id="card-details"> <input type="text" id="card-number" placeholder="Номер карты" class="w-full rounded-md py-3 px-4" required> <input type="text" id="bank-name-card" placeholder="Название банка" class="w-full rounded-md py-3 px-4 mt-4" required> </div> <div id="sbp-details" class="hidden"> <input type="tel" id="phone-number" placeholder="Номер телефона" class="w-full rounded-md py-3 px-4"> <input type="text" id="bank-name-sbp" placeholder="Название банка" class="w-full rounded-md py-3 px-4 mt-4"> </div> <p class="text-xs text-center text-gray-400 pt-2">Вывод средств может занять от 5 минут до 24 часов.</p> <button type="submit" class="w-full btn-primary font-bold py-3 px-4 rounded-lg text-lg"> Создать заявку на вывод </button> </form> </div>
+        <div id="confirmation-view" class="view-section text-center py-16"> <i class="fas fa-check-circle text-7xl text-green-400 mb-6"></i> <h1 id="confirmation-title" class="text-4xl font-bold mb-4 text-white"></h1> <p id="confirmation-message" class="text-gray-400 max-w-sm mx-auto"></p> <button onclick="showView('shop-view')" class="w-full max-w-xs mx-auto bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-4 rounded-lg mt-10 text-lg"> Отлично </button> </div>
     </div>
 
     <div class="bottom-nav">
@@ -216,23 +83,12 @@
         </div>
     </div>
 
-
     <script>
         const tg = window.Telegram.WebApp;
         tg.ready();
         
-        const state = {
-            giftsData: {},
-            cart: {}, 
-            balance: 0,
-            currentView: 'shop-view',
-        };
-        
-        const PREMIUM_PRICES = {
-            3: 1399,
-            6: 2099,
-            12: 3499,
-        };
+        const state = { giftsData: {}, cart: {}, balance: 0, currentView: 'shop-view', };
+        const PREMIUM_PRICES = { 3: 1399, 6: 2099, 12: 3499, };
 
         document.addEventListener('DOMContentLoaded', () => {
             loadState();
@@ -267,176 +123,47 @@
             }
         }
         
-        function renderShop() {
-            const container = document.getElementById('shop-container');
-            container.innerHTML = ''; 
-            for (const categoryName in state.giftsData) {
-                const category = state.giftsData[categoryName];
-                const models = Object.values(category);
-                const previewImage = models.find(m => m.image_url)?.image_url || 'https://placehold.co/400x300/0a192f/e6f1ff?text=No+Image';
-                const card = document.createElement('div');
-                card.className = 'card rounded-lg p-4 shadow-lg cursor-pointer flex flex-col items-center text-center';
-                card.onclick = () => showGiftDetails(categoryName);
-                card.innerHTML = `
-                    <img src="${previewImage}" alt="${categoryName}" class="w-full h-40 object-contain rounded-md mb-4" onerror="this.src='https://placehold.co/400x300/0a192f/e6f1ff?text=Error'">
-                    <h2 class="text-xl font-bold text-white">${categoryName}</h2>`;
-                container.appendChild(card);
-            }
-        }
-        
-        function renderGiftDetails(categoryName) {
-            const container = document.getElementById('gift-detail-container');
-            const title = document.getElementById('gift-detail-title');
-            container.innerHTML = '';
-            title.textContent = categoryName;
-            const category = state.giftsData[categoryName];
-            for (const modelName in category) {
-                const model = category[modelName];
-                if (model.price_rub !== null && model.price_rub > 0) {
-                    const giftId = `${categoryName}|${modelName}`;
-                    const card = document.createElement('div');
-                    card.className = 'card rounded-lg p-3 shadow-md flex flex-col justify-between';
-                    card.innerHTML = `
-                        <div>
-                            <img src="${model.image_url}" alt="${modelName}" class="w-full h-32 object-contain rounded-md mb-3" onerror="this.src='https://placehold.co/150x150/0a192f/ffffff?text=Error'">
-                            <h3 class="font-semibold text-sm leading-tight text-gray-300">${modelName}</h3>
-                        </div>
-                        <div class="mt-3">
-                            <p class="font-bold text-lg text-white">${model.price_rub.toFixed(2)} RUB</p>
-                            <button onclick="addToCart('${giftId}')" class="w-full mt-2 btn-primary text-sm font-bold py-2 px-3 rounded-lg">Добавить</button>
-                        </div>`;
-                    container.appendChild(card);
-                }
-            }
-        }
-        
-        function renderPremiumShop() {
-            const container = document.getElementById('premium-container');
-            container.innerHTML = '';
-            for (const months in PREMIUM_PRICES) {
-                const price = PREMIUM_PRICES[months];
-                const card = document.createElement('div');
-                card.className = 'card rounded-lg p-5 flex justify-between items-center';
-                card.innerHTML = `
-                    <div>
-                        <p class="text-xl font-bold text-white">${months} месяцев Premium</p>
-                        <p class="text-lg text-gray-300">${price.toFixed(2)} RUB</p>
-                    </div>
-                    <button onclick="buyPremium(${months})" class="btn-primary font-bold py-2 px-5 rounded-lg">Купить</button>
-                `;
-                container.appendChild(card);
-            }
-        }
+        // ... Функции рендеринга и управления интерфейсом без изменений ...
+        function renderShop() { const container = document.getElementById('shop-container'); container.innerHTML = ''; for (const categoryName in state.giftsData) { const category = state.giftsData[categoryName]; const models = Object.values(category); const previewImage = models.find(m => m.image_url)?.image_url || 'https://placehold.co/400x300/0a192f/e6f1ff?text=No+Image'; const card = document.createElement('div'); card.className = 'card rounded-lg p-4 shadow-lg cursor-pointer flex flex-col items-center text-center'; card.onclick = () => showGiftDetails(categoryName); card.innerHTML = ` <img src="${previewImage}" alt="${categoryName}" class="w-full h-40 object-contain rounded-md mb-4" onerror="this.src='https://placehold.co/400x300/0a192f/e6f1ff?text=Error'"> <h2 class="text-xl font-bold text-white">${categoryName}</h2>`; container.appendChild(card); } }
+        function renderGiftDetails(categoryName) { const container = document.getElementById('gift-detail-container'); const title = document.getElementById('gift-detail-title'); container.innerHTML = ''; title.textContent = categoryName; const category = state.giftsData[categoryName]; for (const modelName in category) { const model = category[modelName]; if (model.price_rub !== null && model.price_rub > 0) { const giftId = `${categoryName}|${modelName}`; const card = document.createElement('div'); card.className = 'card rounded-lg p-3 shadow-md flex flex-col justify-between'; card.innerHTML = ` <div> <img src="${model.image_url}" alt="${modelName}" class="w-full h-32 object-contain rounded-md mb-3" onerror="this.src='https://placehold.co/150x150/0a192f/ffffff?text=Error'"> <h3 class="font-semibold text-sm leading-tight text-gray-300">${modelName}</h3> </div> <div class="mt-3"> <p class="font-bold text-lg text-white">${model.price_rub.toFixed(2)} RUB</p> <button onclick="addToCart('${giftId}')" class="w-full mt-2 btn-primary text-sm font-bold py-2 px-3 rounded-lg">Добавить</button> </div>`; container.appendChild(card); } } }
+        function renderPremiumShop() { const container = document.getElementById('premium-container'); container.innerHTML = ''; for (const months in PREMIUM_PRICES) { const price = PREMIUM_PRICES[months]; const card = document.createElement('div'); card.className = 'card rounded-lg p-5 flex justify-between items-center'; card.innerHTML = ` <div> <p class="text-xl font-bold text-white">${months} месяцев Premium</p> <p class="text-lg text-gray-300">${price.toFixed(2)} RUB</p> </div> <button onclick="buyPremium(${months})" class="btn-primary font-bold py-2 px-5 rounded-lg">Купить</button> `; container.appendChild(card); } }
+        function renderCart() { const itemsContainer = document.getElementById('cart-items'); const totalElement = document.getElementById('cart-total'); const emptyMsg = document.getElementById('cart-empty-message'); const cartSummary = document.getElementById('cart-summary'); itemsContainer.innerHTML = ''; let total = 0; if (Object.keys(state.cart).length === 0) { emptyMsg.classList.remove('hidden'); cartSummary.classList.add('hidden'); } else { emptyMsg.classList.add('hidden'); cartSummary.classList.remove('hidden'); } for (const giftId in state.cart) { const quantity = state.cart[giftId]; const [categoryName, modelName] = giftId.split('|'); const model = state.giftsData[categoryName][modelName]; total += model.price_rub * quantity; const itemElement = document.createElement('div'); itemElement.className = 'flex items-center gap-4 p-3 rounded-lg card'; itemElement.innerHTML = ` <img src="${model.image_url}" alt="${modelName}" class="w-16 h-16 object-contain rounded-md bg-black/20 p-1" onerror="this.src='https://placehold.co/64x64/0a192f/ffffff?text=Error'"> <div class="flex-grow"> <p class="font-bold text-white">${modelName}</p> <p class="text-sm text-gray-400">${(model.price_rub * quantity).toFixed(2)} RUB</p> </div> <div class="flex items-center gap-3"> <button onclick="updateCart('${giftId}', -1)" class="w-8 h-8 rounded-full bg-gray-700 hover:bg-gray-600 text-white">-</button> <span class="font-bold w-5 text-center text-white">${quantity}</span> <button onclick="updateCart('${giftId}', 1)" class="w-8 h-8 rounded-full bg-gray-700 hover:bg-gray-600 text-white">+</button> </div>`; itemsContainer.appendChild(itemElement); } totalElement.textContent = `${total.toFixed(2)} RUB`; }
+        function updateBalanceDisplay() { document.getElementById('balance-amount').textContent = state.balance.toFixed(2); }
+        function updateCart(giftId, amount) { state.cart[giftId] = (state.cart[giftId] || 0) + amount; if (state.cart[giftId] <= 0) delete state.cart[giftId]; updateCartBadge(); if (state.currentView === 'cart-view') renderCart(); saveState(); }
+        function addToCart(giftId) { updateCart(giftId, 1); tg.HapticFeedback.notificationOccurred('success'); }
+        function updateCartBadge() { const badge = document.getElementById('cart-badge-nav'); const totalItems = Object.values(state.cart).reduce((sum, qty) => sum + qty, 0); if (totalItems > 0) { badge.textContent = totalItems; badge.classList.remove('hidden'); } else { badge.classList.add('hidden'); } }
+        function showView(viewId) { document.querySelectorAll('.view-section').forEach(section => section.style.display = 'none'); document.getElementById(viewId).style.display = 'block'; state.currentView = viewId; document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active')); const navButton = document.querySelector(`.nav-item[onclick="showView('${viewId}')"]`); if(navButton) navButton.classList.add('active'); if (viewId === 'cart-view') renderCart(); if (viewId === 'balance-view') updateBalanceDisplay(); if (viewId === 'gift-detail-view') { document.querySelector(`.nav-item[onclick="showView('shop-view')"]`).classList.add('active'); } }
+        function showGiftDetails(categoryName) { renderGiftDetails(categoryName); showView('gift-detail-view'); }
+        function showConfirmation(title, message) { document.getElementById('confirmation-title').textContent = title; document.getElementById('confirmation-message').textContent = message; showView('confirmation-view'); }
 
-        function renderCart() {
-            const itemsContainer = document.getElementById('cart-items');
-            const totalElement = document.getElementById('cart-total');
-            const emptyMsg = document.getElementById('cart-empty-message');
-            const cartSummary = document.getElementById('cart-summary');
-            itemsContainer.innerHTML = '';
-            let total = 0;
 
-            if (Object.keys(state.cart).length === 0) {
-                emptyMsg.classList.remove('hidden');
-                cartSummary.classList.add('hidden');
-            } else {
-                emptyMsg.classList.add('hidden');
-                cartSummary.classList.remove('hidden');
-            }
-            
-            for (const giftId in state.cart) {
-                const quantity = state.cart[giftId];
-                const [categoryName, modelName] = giftId.split('|');
-                const model = state.giftsData[categoryName][modelName];
-                total += model.price_rub * quantity;
-                const itemElement = document.createElement('div');
-                itemElement.className = 'flex items-center gap-4 p-3 rounded-lg card';
-                itemElement.innerHTML = `
-                    <img src="${model.image_url}" alt="${modelName}" class="w-16 h-16 object-contain rounded-md bg-black/20 p-1" onerror="this.src='https://placehold.co/64x64/0a192f/ffffff?text=Error'">
-                    <div class="flex-grow">
-                        <p class="font-bold text-white">${modelName}</p>
-                        <p class="text-sm text-gray-400">${(model.price_rub * quantity).toFixed(2)} RUB</p>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <button onclick="updateCart('${giftId}', -1)" class="w-8 h-8 rounded-full bg-gray-700 hover:bg-gray-600 text-white">-</button>
-                        <span class="font-bold w-5 text-center text-white">${quantity}</span>
-                        <button onclick="updateCart('${giftId}', 1)" class="w-8 h-8 rounded-full bg-gray-700 hover:bg-gray-600 text-white">+</button>
-                    </div>`;
-                itemsContainer.appendChild(itemElement);
-            }
-            totalElement.textContent = `${total.toFixed(2)} RUB`;
+        // ===== НОВАЯ ТЕСТОВАЯ ФУНКЦИЯ =====
+        function handleTestSend() {
+            console.log("--- ЗАПУСК ТЕСТОВОЙ ОТПРАВКИ ---");
+            const testData = {
+                type: 'TEST_REQUEST',
+                payload: { time: new Date().toISOString() }
+            };
+            // Вызываем ту же функцию, что и для обычных данных
+            sendDataToBot(testData);
         }
         
-        function updateBalanceDisplay() {
-            document.getElementById('balance-amount').textContent = state.balance.toFixed(2);
-        }
-        
-        function updateCart(giftId, amount) {
-            state.cart[giftId] = (state.cart[giftId] || 0) + amount;
-            if (state.cart[giftId] <= 0) delete state.cart[giftId];
-            updateCartBadge();
-            if (state.currentView === 'cart-view') renderCart();
-            saveState();
-        }
-        function addToCart(giftId) {
-            updateCart(giftId, 1);
-            tg.HapticFeedback.notificationOccurred('success');
-        }
-        function updateCartBadge() {
-            const badge = document.getElementById('cart-badge-nav');
-            const totalItems = Object.values(state.cart).reduce((sum, qty) => sum + qty, 0);
-            if (totalItems > 0) {
-                badge.textContent = totalItems;
-                badge.classList.remove('hidden');
-            } else {
-                badge.classList.add('hidden');
-            }
-        }
-        
-        function showView(viewId) {
-            document.querySelectorAll('.view-section').forEach(section => section.style.display = 'none');
-            document.getElementById(viewId).style.display = 'block';
-            state.currentView = viewId;
-            
-            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
-            const navButton = document.querySelector(`.nav-item[onclick="showView('${viewId}')"]`);
-            if(navButton) navButton.classList.add('active');
-
-            if (viewId === 'cart-view') renderCart();
-            if (viewId === 'balance-view') updateBalanceDisplay();
-            if (viewId === 'gift-detail-view') {
-                 document.querySelector(`.nav-item[onclick="showView('shop-view')"]`).classList.add('active');
-            }
-        }
-        function showGiftDetails(categoryName) {
-            renderGiftDetails(categoryName);
-            showView('gift-detail-view');
-        }
-        
-        function showConfirmation(title, message) {
-            document.getElementById('confirmation-title').textContent = title;
-            document.getElementById('confirmation-message').textContent = message;
-            showView('confirmation-view');
-        }
-
-        // --- ИСПРАВЛЕННАЯ ЛОГИКА С ОТЛАДКОЙ ---
+        // ===== ОБЩАЯ ФУНКЦИЯ ОТПРАВКИ =====
         function sendDataToBot(data) {
             try {
                 const dataString = JSON.stringify(data);
-                console.log("5. Отправляем данные в Telegram:", dataString);
+                console.log("Отправляем данные в Telegram:", dataString);
                 tg.sendData(dataString);
-                console.log("6. Команда tg.sendData() выполнена без ошибок.");
+                console.log("Команда tg.sendData() выполнена без ошибок.");
             } catch (error) {
                 console.error("КРИТИЧЕСКАЯ ОШИБКА при отправке данных:", error);
                 tg.showAlert('Ошибка отправки данных. Пожалуйста, перезапустите приложение.');
             }
         }
-
+        
+        // ===== ИСПРАВЛЕННАЯ ФУНКЦИЯ ПРОДАЖИ =====
         function handleSellItems() {
-            console.log("1. Кнопка 'Продать' нажата. Начинаем обработку.");
-
             if (Object.keys(state.cart).length === 0) {
-                console.error("2. Ошибка: корзина пуста.");
                 tg.showAlert('Ваша корзина пуста!');
                 return;
             }
@@ -447,115 +174,38 @@
                 return sum + (model.price_rub * quantity);
             }, 0);
             
-            console.log(`2. Корзина не пуста. Сумма: ${total.toFixed(2)} RUB`);
-            
-            // ИСПОЛЬЗУЕМ НОВЫЙ, БОЛЕЕ НАДЕЖНЫЙ ВАРИАНТ SHOWPOPUP
             tg.showPopup({
                 title: 'Подтверждение',
-                message: `Вы уверены, что хотите продать предметы на сумму ${total.toFixed(2)} RUB? Деньги будут зачислены на ваш внутренний баланс.`,
+                message: `Вы уверены, что хотите продать предметы на сумму ${total.toFixed(2)} RUB?`,
                 buttons: [
                     {id: 'sell', type: 'ok', text: 'Продать'}, 
                     {type: 'cancel'}
                 ]
             }, (buttonId) => {
-                console.log(`3. Пользователь нажал на всплывающем окне. ID кнопки: ${buttonId}`);
-                
                 if (buttonId === 'sell') {
-                    console.log("4. Пользователь подтвердил. Готовим данные для отправки.");
                     const dataToSend = {
                         type: 'SELL_REQUEST',
                         cart: state.cart,
                         total: total
                     };
+                    
+                    // Только отправляем данные. НЕ МЕНЯЕМ БАЛАНС ЗДЕСЬ.
                     sendDataToBot(dataToSend);
-                    state.balance += total;
+                    
+                    // Очищаем корзину и показываем подтверждение
                     state.cart = {};
                     saveState();
                     updateCartBadge();
-                    updateBalanceDisplay();
-                    showConfirmation('Заявка на продажу принята', `Предметы отправлены на проверку. Сумма ${total.toFixed(2)} RUB зачислена на ваш баланс.`);
+                    showConfirmation('Заявка на продажу принята', `Сервер обрабатывает ваш запрос. Вы получите уведомление о зачислении средств.`);
                 }
             });
         }
 
-        function buyPremium(months) {
-            const price = PREMIUM_PRICES[months];
-            if (state.balance < price) {
-                tg.showAlert('Недостаточно средств на балансе.');
-                return;
-            }
-            
-             tg.showPopup({
-                title: 'Покупка Premium',
-                message: `С вашего баланса будет списано ${price.toFixed(2)} RUB за ${months} мес. подписки. Продолжить?`,
-                buttons: [{type: 'ok', text: 'Да'}, {type: 'cancel'}]
-            }, (isOk) => {
-                if(isOk) {
-                    const dataToSend = {
-                        type: 'PREMIUM_PURCHASE',
-                        months: months,
-                        price: price
-                    };
-                    sendDataToBot(dataToSend);
-                    state.balance -= price;
-                    saveState();
-                    updateBalanceDisplay();
-                    showConfirmation('Покупка совершена', `Вы успешно приобрели Telegram Premium на ${months} месяцев. Администратор скоро выдаст вам подписку.`);
-                }
-            });
-        }
+        // ... Остальные функции (buyPremium, handleWithdraw, setupEventListeners) без изменений ...
+        function buyPremium(months) { const price = PREMIUM_PRICES[months]; if (state.balance < price) { tg.showAlert('Недостаточно средств на балансе.'); return; } tg.showPopup({ title: 'Покупка Premium', message: `С вашего баланса будет списано ${price.toFixed(2)} RUB за ${months} мес. подписки. Продолжить?`, buttons: [{type: 'ok', text: 'Да'}, {type: 'cancel'}] }, (isOk) => { if(isOk) { const dataToSend = { type: 'PREMIUM_PURCHASE', months: months, price: price }; sendDataToBot(dataToSend); state.balance -= price; saveState(); updateBalanceDisplay(); showConfirmation('Покупка совершена', `Вы успешно приобрели Telegram Premium на ${months} месяцев. Администратор скоро выдаст вам подписку.`); } }); }
+        function handleWithdraw(event) { event.preventDefault(); const amount = parseFloat(document.getElementById('withdraw-amount').value); if (isNaN(amount) || amount <= 0) { tg.showAlert('Введите корректную сумму для вывода.'); return; } if (state.balance < amount) { tg.showAlert('Недостаточно средств на балансе.'); return; } const method = document.getElementById('payment-method').value; const paymentDetails = (method === 'card') ? { type: 'Карта', cardNumber: document.getElementById('card-number').value, bank: document.getElementById('bank-name-card').value } : { type: 'СБП', phone: document.getElementById('phone-number').value, bank: document.getElementById('bank-name-sbp').value }; tg.showPopup({ title: 'Подтверждение вывода', message: `Создать заявку на вывод ${amount.toFixed(2)} RUB? Эта сумма будет списана с вашего баланса.`, buttons: [{type: 'ok', text: 'Да'}, {type: 'cancel'}] }, (isOk) => { if(isOk) { const dataToSend = { type: 'WITHDRAW_REQUEST', amount: amount.toFixed(2), paymentDetails: paymentDetails }; sendDataToBot(dataToSend); state.balance -= amount; saveState(); updateBalanceDisplay(); showConfirmation('Заявка на вывод создана', `Сумма ${amount.toFixed(2)} RUB будет выплачена вам в течение 24 часов.`); event.target.reset(); } }); }
+        function setupEventListeners() { document.getElementById('payment-method').addEventListener('change', (e) => { const isCard = e.target.value === 'card'; document.getElementById('card-details').style.display = isCard ? 'block' : 'none'; document.getElementById('sbp-details').style.display = !isCard ? 'block' : 'none'; document.getElementById('card-number').required = isCard; document.getElementById('bank-name-card').required = isCard; document.getElementById('phone-number').required = !isCard; document.getElementById('bank-name-sbp').required = !isCard; }); document.getElementById('payment-method').dispatchEvent(new Event('change')); document.getElementById('withdraw-form').addEventListener('submit', handleWithdraw); }
 
-        function handleWithdraw(event) {
-            event.preventDefault();
-            const amount = parseFloat(document.getElementById('withdraw-amount').value);
-            if (isNaN(amount) || amount <= 0) {
-                tg.showAlert('Введите корректную сумму для вывода.');
-                return;
-            }
-            if (state.balance < amount) {
-                tg.showAlert('Недостаточно средств на балансе.');
-                return;
-            }
-
-            const method = document.getElementById('payment-method').value;
-            const paymentDetails = (method === 'card') ? 
-                { type: 'Карта', cardNumber: document.getElementById('card-number').value, bank: document.getElementById('bank-name-card').value } :
-                { type: 'СБП', phone: document.getElementById('phone-number').value, bank: document.getElementById('bank-name-sbp').value };
-
-            tg.showPopup({
-                title: 'Подтверждение вывода',
-                message: `Создать заявку на вывод ${amount.toFixed(2)} RUB? Эта сумма будет списана с вашего баланса.`,
-                buttons: [{type: 'ok', text: 'Да'}, {type: 'cancel'}]
-            }, (isOk) => {
-                 if(isOk) {
-                    const dataToSend = {
-                        type: 'WITHDRAW_REQUEST',
-                        amount: amount.toFixed(2),
-                        paymentDetails: paymentDetails
-                    };
-                    sendDataToBot(dataToSend);
-                    state.balance -= amount;
-                    saveState();
-                    updateBalanceDisplay();
-                    showConfirmation('Заявка на вывод создана', `Сумма ${amount.toFixed(2)} RUB будет выплачена вам в течение 24 часов.`);
-                    event.target.reset();
-                }
-            });
-        }
-        
-        function setupEventListeners() {
-            document.getElementById('payment-method').addEventListener('change', (e) => {
-                const isCard = e.target.value === 'card';
-                document.getElementById('card-details').style.display = isCard ? 'block' : 'none';
-                document.getElementById('sbp-details').style.display = !isCard ? 'block' : 'none';
-                document.getElementById('card-number').required = isCard;
-                document.getElementById('bank-name-card').required = isCard;
-                document.getElementById('phone-number').required = !isCard;
-                document.getElementById('bank-name-sbp').required = !isCard;
-            });
-            document.getElementById('payment-method').dispatchEvent(new Event('change'));
-            document.getElementById('withdraw-form').addEventListener('submit', handleWithdraw);
-        }
     </script>
 </body>
 </html>
