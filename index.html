@@ -415,8 +415,7 @@
                 try {
                     console.log("Попытка выполнить tg.sendData()...");
                     tg.sendData(JSON.stringify(data));
-                    console.log("tg.sendData() выполнена. Попытка закрыть окно tg.close()...");
-                    tg.close();
+                    console.log("tg.sendData() выполнена успешно");
                 } catch (error) {
                     console.error('КРИТИЧЕСКАЯ ОШИБКА в tg.sendData:', error);
                     tg.showAlert(`КРИТИЧЕСКАЯ ОШИБКА в tg.sendData: ${error.message}`);
@@ -451,16 +450,23 @@
                 ]
             }, (buttonId) => {
                 console.log(`Коллбэк tg.showPopup. Пользователь нажал кнопку с ID: '${buttonId}'`);
-                // Исправление: проверяем как 'ok', так и пустую строку
                 if (buttonId === 'ok' || buttonId === '') {
                     const dataToSend = { type: 'SELL_REQUEST', cart: state.cart, total: total };
                     console.log("Пользователь подтвердил продажу. Подготовка к отправке данных:", dataToSend);
+                    
+                    // Обновляем состояние приложения
                     state.balance += total;
                     state.cart = {};
                     updateCartBadge();
                     updateBalanceDisplay();
                     saveState();
+                    
+                    // Отправляем данные боту БЕЗ закрытия приложения
                     sendDataToBot(dataToSend);
+                    
+                    // Показываем уведомление об успехе и перенаправляем на баланс
+                    tg.showAlert('Предметы успешно проданы! Деньги зачислены на ваш баланс.');
+                    showView('balance-view');
                 } else {
                     console.log("Пользователь отменил продажу.");
                 }
@@ -488,6 +494,8 @@
                     updateBalanceDisplay();
                     saveState();
                     sendDataToBot(dataToSend);
+                    // Закрываем приложение только после покупки Premium
+                    setTimeout(() => tg.close(), 500);
                 }
             });
         }
@@ -524,6 +532,8 @@
                     saveState();
                     event.target.reset();
                     sendDataToBot(dataToSend);
+                    // Закрываем приложение только после заявки на вывод
+                    setTimeout(() => tg.close(), 500);
                 }
             });
         }
