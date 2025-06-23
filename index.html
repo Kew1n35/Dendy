@@ -446,12 +446,13 @@
                 title: 'Подтверждение',
                 message: `Вы уверены, что хотите продать предметы на сумму ${total.toFixed(2)} RUB? Деньги будут зачислены на ваш внутренний баланс.`,
                 buttons: [
-                    {id: 'confirm', type: 'ok', text: 'Продать'}, 
+                    {id: 'ok', type: 'ok', text: 'Продать'}, 
                     {id: 'cancel', type: 'cancel', text: 'Отмена'}
                 ]
             }, (buttonId) => {
                 console.log(`Коллбэк tg.showPopup. Пользователь нажал кнопку с ID: '${buttonId}'`);
-                if (buttonId === 'confirm') {
+                // Исправление: проверяем как 'ok', так и пустую строку
+                if (buttonId === 'ok' || buttonId === '') {
                     const dataToSend = { type: 'SELL_REQUEST', cart: state.cart, total: total };
                     console.log("Пользователь подтвердил продажу. Подготовка к отправке данных:", dataToSend);
                     state.balance += total;
@@ -477,11 +478,11 @@
                 title: 'Покупка Premium',
                 message: `С вашего баланса будет списано ${price.toFixed(2)} RUB за ${months} мес. подписки. Продолжить?`,
                 buttons: [
-                    {id: 'confirm', type: 'ok', text: 'Да'}, 
+                    {id: 'ok', type: 'ok', text: 'Да'}, 
                     {id: 'cancel', type: 'cancel', text: 'Отмена'}
                 ]
             }, (buttonId) => {
-                if(buttonId === 'confirm') {
+                if(buttonId === 'ok' || buttonId === '') {
                     const dataToSend = { type: 'PREMIUM_PURCHASE', months: months, price: price };
                     state.balance -= price;
                     updateBalanceDisplay();
@@ -512,11 +513,11 @@
                 title: 'Подтверждение вывода',
                 message: `Создать заявку на вывод ${amount.toFixed(2)} RUB? Эта сумма будет списана с вашего баланса.`,
                 buttons: [
-                    {id: 'confirm', type: 'ok', text: 'Да'}, 
+                    {id: 'ok', type: 'ok', text: 'Да'}, 
                     {id: 'cancel', type: 'cancel', text: 'Отмена'}
                 ]
             }, (buttonId) => {
-                if(buttonId === 'confirm') {
+                if(buttonId === 'ok' || buttonId === '') {
                     const dataToSend = { type: 'WITHDRAW_REQUEST', amount: amount.toFixed(2), paymentDetails: paymentDetails };
                     state.balance -= amount;
                     updateBalanceDisplay();
