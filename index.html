@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gift Shop</title>
+    <title>Gift Shop (Debug v2)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
@@ -193,13 +193,6 @@
                 </button>
             </form>
         </div>
-        
-        <!-- Этот раздел больше не нужен, так как обратная связь идет через уведомления бота
-        <div id="confirmation-view" class="view-section text-center py-16">
-            ...
-        </div>
-        -->
-
     </div>
 
     <div class="bottom-nav">
@@ -216,6 +209,7 @@
 
     <script>
         const tg = window.Telegram.WebApp;
+        console.log("WebApp script loaded. Telegram object:", tg);
         tg.ready();
         
         const state = {
@@ -225,13 +219,10 @@
             currentView: 'shop-view',
         };
         
-        const PREMIUM_PRICES = {
-            3: 1399,
-            6: 2099,
-            12: 3499,
-        };
+        const PREMIUM_PRICES = { 3: 1399, 6: 2099, 12: 3499 };
 
         document.addEventListener('DOMContentLoaded', () => {
+            console.log("DOM fully loaded and parsed.");
             loadState();
             fetchGifts();
             setupEventListeners();
@@ -241,6 +232,7 @@
             tg.setHeaderColor('#0a192f');
         });
 
+        // ... (остальные функции рендеринга и управления состоянием остаются без изменений) ...
         function loadState() {
             state.balance = parseFloat(localStorage.getItem('userBalance') || '0');
             state.cart = JSON.parse(localStorage.getItem('userCart') || '{}');
@@ -409,29 +401,30 @@
             renderGiftDetails(categoryName);
             showView('gift-detail-view');
         }
-        
-        // --- УЛУЧШЕННАЯ ЛОГИКА ---
+
+        // --- ДЕБАГ-ВЕРСИЯ КЛЮЧЕВЫХ ФУНКЦИЙ ---
         function sendDataToBot(data) {
-            // Проверяем, что tg.sendData доступна
+            console.log("Вызвана функция sendDataToBot с данными:", data);
             if (tg.sendData) {
                 try {
+                    console.log("Попытка выполнить tg.sendData()...");
                     tg.sendData(JSON.stringify(data));
-                    // После отправки данных закрываем Web App.
-                    // Пользователь вернется в чат и увидит сообщение от бота.
-                    tg.close();
+                    console.log("tg.sendData() выполнена. Попытка закрыть окно tg.close()...");
+                    // tg.close(); // Временно закомментируем, чтобы видеть логи
                 } catch (error) {
-                    // Показываем ошибку, если tg.sendData не сработала
-                    console.error('Ошибка tg.sendData:', error);
-                    tg.showAlert('Не удалось отправить данные. Пожалуйста, убедитесь, что вы используете последнюю версию Telegram.');
+                    console.error('КРИТИЧЕСКАЯ ОШИБКА в tg.sendData:', error);
+                    tg.showAlert(`КРИТИЧЕСКАЯ ОШИБКА в tg.sendData: ${error.message}`);
                 }
             } else {
-                 console.error('tg.sendData не определена. Возможно, приложение открыто не в Telegram.');
+                 console.error('ОШИБКА: tg.sendData не определена. Приложение открыто не в Telegram?');
                  alert('Эта функция доступна только внутри Telegram.');
             }
         }
 
         function handleSellItems() {
+            console.log("Нажата кнопка 'Продать предметы'.");
             if (Object.keys(state.cart).length === 0) {
+                console.log("Корзина пуста. Показ уведомления.");
                 tg.showAlert('Ваша корзина пуста!');
                 return;
             }
@@ -442,22 +435,27 @@
                 return sum + (model.price_rub * quantity);
             }, 0);
             
+            console.log(`Корзина не пуста. Итоговая сумма: ${total}. Показ tg.showPopup.`);
             tg.showPopup({
                 title: 'Подтверждение',
                 message: `Вы уверены, что хотите продать предметы на сумму ${total.toFixed(2)} RUB? Деньги будут зачислены на ваш внутренний баланс.`,
                 buttons: [{type: 'ok', text: 'Продать'}, {type: 'cancel'}]
             }, (isOk) => {
+                console.log(`Коллбэк tg.showPopup. Пользователь нажал 'ok': ${isOk}`);
                 if (isOk) {
                     const dataToSend = { type: 'SELL_REQUEST', cart: state.cart, total: total };
-                    // Оптимистичное обновление UI
+                    console.log("Пользователь подтвердил продажу. Подготовка к отправке данных:", dataToSend);
                     state.balance += total;
                     state.cart = {};
                     saveState();
                     sendDataToBot(dataToSend);
+                } else {
+                    console.log("Пользователь отменил продажу.");
                 }
             });
         }
-
+        
+        // ... (остальные функции остаются без изменений)
         function buyPremium(months) {
             const price = PREMIUM_PRICES[months];
             if (state.balance < price) {
