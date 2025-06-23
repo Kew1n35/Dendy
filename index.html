@@ -194,14 +194,11 @@
             </form>
         </div>
         
+        <!-- Этот раздел больше не нужен, так как обратная связь идет через уведомления бота
         <div id="confirmation-view" class="view-section text-center py-16">
-            <i class="fas fa-check-circle text-7xl text-green-400 mb-6"></i>
-            <h1 id="confirmation-title" class="text-4xl font-bold mb-4 text-white"></h1>
-            <p id="confirmation-message" class="text-gray-400 max-w-sm mx-auto"></p>
-            <button onclick="showView('shop-view')" class="w-full max-w-xs mx-auto bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-4 rounded-lg mt-10 text-lg">
-                Отлично
-            </button>
+            ...
         </div>
+        -->
 
     </div>
 
@@ -413,18 +410,23 @@
             showView('gift-detail-view');
         }
         
-        function showConfirmation(title, message) {
-            document.getElementById('confirmation-title').textContent = title;
-            document.getElementById('confirmation-message').textContent = message;
-            showView('confirmation-view');
-        }
-
-        // --- ИСПРАВЛЕННАЯ ЛОГИКА ---
+        // --- УЛУЧШЕННАЯ ЛОГИКА ---
         function sendDataToBot(data) {
-            try {
-                tg.sendData(JSON.stringify(data));
-            } catch (error) {
-                tg.showAlert('Ошибка отправки данных. Пожалуйста, перезапустите приложение.');
+            // Проверяем, что tg.sendData доступна
+            if (tg.sendData) {
+                try {
+                    tg.sendData(JSON.stringify(data));
+                    // После отправки данных закрываем Web App.
+                    // Пользователь вернется в чат и увидит сообщение от бота.
+                    tg.close();
+                } catch (error) {
+                    // Показываем ошибку, если tg.sendData не сработала
+                    console.error('Ошибка tg.sendData:', error);
+                    tg.showAlert('Не удалось отправить данные. Пожалуйста, убедитесь, что вы используете последнюю версию Telegram.');
+                }
+            } else {
+                 console.error('tg.sendData не определена. Возможно, приложение открыто не в Telegram.');
+                 alert('Эта функция доступна только внутри Telegram.');
             }
         }
 
@@ -446,18 +448,12 @@
                 buttons: [{type: 'ok', text: 'Продать'}, {type: 'cancel'}]
             }, (isOk) => {
                 if (isOk) {
-                    const dataToSend = {
-                        type: 'SELL_REQUEST',
-                        cart: state.cart,
-                        total: total
-                    };
-                    sendDataToBot(dataToSend);
-                    state.balance += total; // Оптимистичное обновление
+                    const dataToSend = { type: 'SELL_REQUEST', cart: state.cart, total: total };
+                    // Оптимистичное обновление UI
+                    state.balance += total;
                     state.cart = {};
                     saveState();
-                    updateCartBadge();
-                    updateBalanceDisplay();
-                    showConfirmation('Заявка на продажу принята', `Предметы отправлены на проверку. Сумма ${total.toFixed(2)} RUB зачислена на ваш баланс.`);
+                    sendDataToBot(dataToSend);
                 }
             });
         }
@@ -475,16 +471,10 @@
                 buttons: [{type: 'ok', text: 'Да'}, {type: 'cancel'}]
             }, (isOk) => {
                 if(isOk) {
-                    const dataToSend = {
-                        type: 'PREMIUM_PURCHASE',
-                        months: months,
-                        price: price
-                    };
-                    sendDataToBot(dataToSend);
-                    state.balance -= price; // Оптимистичное обновление
+                    const dataToSend = { type: 'PREMIUM_PURCHASE', months: months, price: price };
+                    state.balance -= price;
                     saveState();
-                    updateBalanceDisplay();
-                    showConfirmation('Покупка совершена', `Вы успешно приобрели Telegram Premium на ${months} месяцев. Администратор скоро выдаст вам подписку.`);
+                    sendDataToBot(dataToSend);
                 }
             });
         }
@@ -512,17 +502,11 @@
                 buttons: [{type: 'ok', text: 'Да'}, {type: 'cancel'}]
             }, (isOk) => {
                  if(isOk) {
-                    const dataToSend = {
-                        type: 'WITHDRAW_REQUEST',
-                        amount: amount.toFixed(2),
-                        paymentDetails: paymentDetails
-                    };
-                    sendDataToBot(dataToSend);
-                    state.balance -= amount; // Оптимистичное обновление
+                    const dataToSend = { type: 'WITHDRAW_REQUEST', amount: amount.toFixed(2), paymentDetails: paymentDetails };
+                    state.balance -= amount;
                     saveState();
-                    updateBalanceDisplay();
-                    showConfirmation('Заявка на вывод создана', `Сумма ${amount.toFixed(2)} RUB будет выплачена вам в течение 24 часов.`);
                     event.target.reset();
+                    sendDataToBot(dataToSend);
                 }
             });
         }
