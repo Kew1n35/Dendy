@@ -423,20 +423,20 @@
         function sendDataToBot(data) {
             try {
                 const dataString = JSON.stringify(data);
-                console.log("5. Отправляем данные в Telegram:", dataString); // <-- ДОБАВЛЕНО
+                console.log("5. Отправляем данные в Telegram:", dataString);
                 tg.sendData(dataString);
-                console.log("6. Команда tg.sendData() выполнена без ошибок."); // <-- ДОБАВЛЕНО
+                console.log("6. Команда tg.sendData() выполнена без ошибок.");
             } catch (error) {
-                console.error("КРИТИЧЕСКАЯ ОШИБКА при отправке данных:", error); // <-- ДОБАВЛЕНО
+                console.error("КРИТИЧЕСКАЯ ОШИБКА при отправке данных:", error);
                 tg.showAlert('Ошибка отправки данных. Пожалуйста, перезапустите приложение.');
             }
         }
 
         function handleSellItems() {
-            console.log("1. Кнопка 'Продать' нажата. Начинаем обработку."); // <-- ДОБАВЛЕНО
+            console.log("1. Кнопка 'Продать' нажата. Начинаем обработку.");
 
             if (Object.keys(state.cart).length === 0) {
-                console.error("2. Ошибка: корзина пуста."); // <-- ДОБАВЛЕНО
+                console.error("2. Ошибка: корзина пуста.");
                 tg.showAlert('Ваша корзина пуста!');
                 return;
             }
@@ -447,23 +447,28 @@
                 return sum + (model.price_rub * quantity);
             }, 0);
             
-            console.log(`2. Корзина не пуста. Сумма: ${total.toFixed(2)} RUB`); // <-- ДОБАВЛЕНО
-
+            console.log(`2. Корзина не пуста. Сумма: ${total.toFixed(2)} RUB`);
+            
+            // ИСПОЛЬЗУЕМ НОВЫЙ, БОЛЕЕ НАДЕЖНЫЙ ВАРИАНТ SHOWPOPUP
             tg.showPopup({
                 title: 'Подтверждение',
                 message: `Вы уверены, что хотите продать предметы на сумму ${total.toFixed(2)} RUB? Деньги будут зачислены на ваш внутренний баланс.`,
-                buttons: [{type: 'ok', text: 'Продать'}, {type: 'cancel'}]
-            }, (isOk) => {
-                console.log(`3. Пользователь нажал на всплывающем окне. isOk: ${isOk}`); // <-- ДОБАВЛЕНО
-                if (isOk) {
-                    console.log("4. Пользователь подтвердил. Готовим данные для отправки."); // <-- ДОБАВЛЕНО
+                buttons: [
+                    {id: 'sell', type: 'ok', text: 'Продать'}, 
+                    {type: 'cancel'}
+                ]
+            }, (buttonId) => {
+                console.log(`3. Пользователь нажал на всплывающем окне. ID кнопки: ${buttonId}`);
+                
+                if (buttonId === 'sell') {
+                    console.log("4. Пользователь подтвердил. Готовим данные для отправки.");
                     const dataToSend = {
                         type: 'SELL_REQUEST',
                         cart: state.cart,
                         total: total
                     };
                     sendDataToBot(dataToSend);
-                    state.balance += total; // Оптимистичное обновление
+                    state.balance += total;
                     state.cart = {};
                     saveState();
                     updateCartBadge();
@@ -492,7 +497,7 @@
                         price: price
                     };
                     sendDataToBot(dataToSend);
-                    state.balance -= price; // Оптимистичное обновление
+                    state.balance -= price;
                     saveState();
                     updateBalanceDisplay();
                     showConfirmation('Покупка совершена', `Вы успешно приобрели Telegram Premium на ${months} месяцев. Администратор скоро выдаст вам подписку.`);
@@ -529,7 +534,7 @@
                         paymentDetails: paymentDetails
                     };
                     sendDataToBot(dataToSend);
-                    state.balance -= amount; // Оптимистичное обновление
+                    state.balance -= amount;
                     saveState();
                     updateBalanceDisplay();
                     showConfirmation('Заявка на вывод создана', `Сумма ${amount.toFixed(2)} RUB будет выплачена вам в течение 24 часов.`);
