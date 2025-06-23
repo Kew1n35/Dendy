@@ -419,17 +419,24 @@
             showView('confirmation-view');
         }
 
-        // --- ИСПРАВЛЕННАЯ ЛОГИКА ---
+        // --- ИСПРАВЛЕННАЯ ЛОГИКА С ОТЛАДКОЙ ---
         function sendDataToBot(data) {
             try {
-                tg.sendData(JSON.stringify(data));
+                const dataString = JSON.stringify(data);
+                console.log("5. Отправляем данные в Telegram:", dataString); // <-- ДОБАВЛЕНО
+                tg.sendData(dataString);
+                console.log("6. Команда tg.sendData() выполнена без ошибок."); // <-- ДОБАВЛЕНО
             } catch (error) {
+                console.error("КРИТИЧЕСКАЯ ОШИБКА при отправке данных:", error); // <-- ДОБАВЛЕНО
                 tg.showAlert('Ошибка отправки данных. Пожалуйста, перезапустите приложение.');
             }
         }
 
         function handleSellItems() {
+            console.log("1. Кнопка 'Продать' нажата. Начинаем обработку."); // <-- ДОБАВЛЕНО
+
             if (Object.keys(state.cart).length === 0) {
+                console.error("2. Ошибка: корзина пуста."); // <-- ДОБАВЛЕНО
                 tg.showAlert('Ваша корзина пуста!');
                 return;
             }
@@ -440,12 +447,16 @@
                 return sum + (model.price_rub * quantity);
             }, 0);
             
+            console.log(`2. Корзина не пуста. Сумма: ${total.toFixed(2)} RUB`); // <-- ДОБАВЛЕНО
+
             tg.showPopup({
                 title: 'Подтверждение',
                 message: `Вы уверены, что хотите продать предметы на сумму ${total.toFixed(2)} RUB? Деньги будут зачислены на ваш внутренний баланс.`,
                 buttons: [{type: 'ok', text: 'Продать'}, {type: 'cancel'}]
             }, (isOk) => {
+                console.log(`3. Пользователь нажал на всплывающем окне. isOk: ${isOk}`); // <-- ДОБАВЛЕНО
                 if (isOk) {
+                    console.log("4. Пользователь подтвердил. Готовим данные для отправки."); // <-- ДОБАВЛЕНО
                     const dataToSend = {
                         type: 'SELL_REQUEST',
                         cart: state.cart,
